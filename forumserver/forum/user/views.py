@@ -57,7 +57,7 @@ def login(request):
             return JsonResponse(data)
     else:
         login_form = LoginForm()
-    data['status'] = status.HTTP_400_BAD_REQUEST 
+    data['status'] = status.HTTP_400_BAD_REQUEST
     return JsonResponse(data)
 
 @api_view(['GET'])

@@ -1,6 +1,7 @@
 import PostItem from './post_item.jsx'
 import React, { useState, useEffect } from 'react';
 import axios from "axios"
+import NewPost from './newpost.jsx'
 
 function PostContainer() {
   const [postlist, setPostlist] = useState([]);
@@ -17,10 +18,13 @@ function PostContainer() {
   });
 
   return (
-    <div className="post-container">
-    <div className="fs-4 mb-3">All Posts</div>
-    <div className="d-flex flex-wrap">{postlist}</div>
-    </div>
+    <>
+      <div className="post-container">
+        <div className="fs-4 mb-3">All Posts</div>
+        <div className="d-flex flex-wrap">{postlist}</div>
+      </div>
+      <NewPost />
+    </>
   );
 }
 
