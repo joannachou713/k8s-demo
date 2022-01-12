@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  front:
+    build:
+      context: .
+    volumes:
+      - .:/forum
+    ports:
+      - 3000:3000
+    image: front:forum
+    container_name: front_container
+    command: yarn start
