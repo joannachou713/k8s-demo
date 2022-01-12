@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import axios from "axios"
+import NewComment from "./newcomment.jsx"
 
 function Post(props) {
   let params = useParams();
@@ -45,6 +46,8 @@ function Post(props) {
     <hr/>
       <div className="mt-3 fw-bold" style={{ color: '#0044bb'}}>comments section</div>
       {comments}
+
+      <NewComment blog_id={params.postId}/>
     </div>
   );
 }
